@@ -1,7 +1,8 @@
 FROM node:22-alpine
 
-# The addon shells out to curl to fetch gdflix pages
-RUN apk add --no-cache curl
+# addon shells out to curl to fetch gdflix pages
+RUN apk add --no-cache curl \
+    && npm cache clean --force
 
 WORKDIR /app
 
