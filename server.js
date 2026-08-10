@@ -1013,7 +1013,7 @@ app.post('/configuration', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.redirect('/manifest.json');
+  res.redirect('/configure');
 });
 
 app.use((req, res) => {
