@@ -1,0 +1,116 @@
+{
+  "id": "org.stremio.bollyflix",
+  "version": "1.4.0",
+  "name": "BollyFlix",
+  "description": "Bollywood & international movies and web series from BollyFlix (bollyflix.free)",
+  "logo": "https://bollyflix.med/wp-content/uploads/2023/05/Bollyflix-movies.png",
+  "background": "https://bollyflixcdn.site/wp-content/uploads/2021/08/Home-Banner.jpg",
+  "resources": [
+    "catalog",
+    "stream",
+    "meta",
+    {
+      "name": "config",
+      "types": [
+        "movie",
+        "series"
+      ],
+      "form": [
+        {
+          "key": "maxResolution",
+          "type": "select",
+          "title": "Maximum resolution",
+          "subtitle": "Hide streams above this resolution",
+          "options": [
+            {
+              "key": "any",
+              "label": "Any (show all)"
+            },
+            {
+              "key": "2160p",
+              "label": "4K (2160p)"
+            },
+            {
+              "key": "1080p",
+              "label": "1080p"
+            },
+            {
+              "key": "720p",
+              "label": "720p"
+            },
+            {
+              "key": "480p",
+              "label": "480p"
+            }
+          ]
+        },
+        {
+          "key": "sources",
+          "type": "checkbox",
+          "title": "Sources",
+          "subtitle": "Which sources to include",
+          "options": [
+            {
+              "key": "r2",
+              "title": "R2 (CLOUD DOWNLOAD [R2])"
+            },
+            {
+              "key": "fastcloud",
+              "title": "FAST CLOUD (Cloud Resume Download)"
+            }
+          ]
+        },
+        {
+          "key": "waitForCloudLink",
+          "type": "toggle",
+          "title": "Wait for Generate Cloud Link",
+          "subtitle": "Auto-click 'Generate Cloud Link' and wait for a Cloud Resume button (adds delay)"
+        }
+      ]
+    }
+  ],
+  "types": [
+    "movie",
+    "series"
+  ],
+  "catalogs": [
+    {
+      "type": "movie",
+      "id": "bollyflix_movies",
+      "name": "BollyFlix Movies",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": false
+        },
+        {
+          "name": "skip",
+          "isRequired": false
+        }
+      ]
+    },
+    {
+      "type": "series",
+      "id": "bollyflix_series",
+      "name": "BollyFlix Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": false
+        },
+        {
+          "name": "skip",
+          "isRequired": false
+        }
+      ]
+    }
+  ],
+  "idPrefixes": [
+    "tt",
+    "bf:"
+  ],
+  "behaviorHints": {
+    "configurable": true,
+    "configurationRequired": false
+  }
+}

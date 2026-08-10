@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  bollyflix:
+    image: ghcr.io/YOUR_GITHUB_USERNAME/stremio-bollyfix:latest
+    container_name: bollyflix
+    restart: unless-stopped
+    ports:
+      - "7000:7000"
+    environment:
+      - PORT=7000
+      - TZ=UTC
+    # optional: persist addon configuration (the Stremio in-app form)
+    volumes:
+      - ./config.json:/app/config.json
