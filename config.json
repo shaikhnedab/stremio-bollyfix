@@ -1,0 +1,8 @@
+{
+  "maxResolution": "any",
+  "sources": [
+    "r2",
+    "fastcloud"
+  ],
+  "waitForCloudLink": false
+}
